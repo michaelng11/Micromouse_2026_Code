@@ -10,10 +10,10 @@ Action solver(Maze* m) {
 void maze_init(Maze* m) {
     /* Set initial mouse state */
     m->state = SEARCHING_CENTER;
-    m->target_x_min = 7;
-    m->target_x_max = 8;
-    m->target_y_min = 7;
-    m->target_y_max = 8;
+    m->target_x_min = TARGET_X_MIN;
+    m->target_x_max = TARGET_X_MAX;
+    m->target_y_min = TARGET_Y_MIN;
+    m->target_y_max = TARGET_Y_MAX;
     m->mouse_x = 0;
     m->mouse_y = 0;
     m->mouse_dir = NORTH;
@@ -189,10 +189,10 @@ Action floodFill(Maze* m) {
         }
         else if (m->state == WAITING) {
             if (API_wallFront()) {
-                m->target_x_min = 7; 
-                m->target_x_max = 8;
-                m->target_y_min = 7; 
-                m->target_y_max = 8;
+                m->target_x_min = TARGET_X_MIN; 
+                m->target_x_max = TARGET_X_MAX;
+                m->target_y_min = TARGET_Y_MIN; 
+                m->target_y_max = TARGET_Y_MAX;
                 m->state = SPEEDRUN;
             }
             maze_recalculate_distance(m);

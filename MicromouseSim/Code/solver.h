@@ -13,6 +13,12 @@
 #define WALL_WEST 0x08 // 0000 1000
 #define UNVISITED 0x10 // 0001 0000
 
+/* Goal Cells */
+#define TARGET_X_MIN 7
+#define TARGET_X_MAX 8
+#define TARGET_Y_MIN 7
+#define TARGET_Y_MAX 8
+
 /* Mouse State */
 typedef enum MouseState {
     SEARCHING_CENTER, 
